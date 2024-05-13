@@ -11,6 +11,11 @@ public class JobsTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    private void Update()
+    {
         uint seed = 9421;
         Random rng = new(seed);
 
@@ -62,6 +67,7 @@ public class JobsTest : MonoBehaviour
 [BurstCompile]
 public struct SimpleDistributedJob : IJob
 {
+    [ReadOnly]
     public float2 a;
     public NativeArray<float> result;
 
@@ -79,6 +85,7 @@ public struct SimpleDistributedJob : IJob
 [BurstCompile]
 public struct SimpleCollatedJob : IJob
 {
+    [ReadOnly]
     public NativeArray<float2> a;
     public NativeArray<float> result;
     public void Execute()
