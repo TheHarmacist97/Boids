@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a12dc10a059a9e4982c76a5ac6ac3d5, type: 3}
+  m_Name: Bird
+  m_EditorClassIdentifier: 
+  visionRange: -0.41
+  visionRadius: 1.521
+  trespassRadius: 3
+  avoidanceStrength: 0.493
+  alignmentStrength: 0.67
+  cohesionStrength: 1.02
+  speed: 1.66
+  turningSpeed: 4
