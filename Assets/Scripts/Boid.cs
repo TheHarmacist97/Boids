@@ -80,7 +80,7 @@ public class Boid : MonoBehaviour
                                                                                             //earlier, if the neighbour is in max Vision dist
                 if (dotVal > parameters.visionRange)
                 {
-                    neighbours.Add(new Neighbour(boid, thisToNeighbour, magnitude));
+                    neighbours.Add(new Neighbour(boid.transform, thisToNeighbour, magnitude));
                 }
             }
         }
@@ -102,7 +102,7 @@ public class Boid : MonoBehaviour
     {
         foreach (Neighbour neighbour in neighbours)
         {
-            initDirection += neighbour.boid.headingDirection * parameters.alignmentStrength / neighbour.distance;
+            initDirection += neighbour.boid.forward * parameters.alignmentStrength / neighbour.distance;
         }
         return initDirection;
     }
@@ -201,11 +201,11 @@ public class Boid : MonoBehaviour
 [SerializeField]
 public class Neighbour
 {
-    public Boid boid;
+    public Transform boid;
     public Vector3 toNeighbor;
     public float distance;
 
-    public Neighbour(Boid boid, Vector3 toNeighbor, float distance)
+    public Neighbour(Transform boid, Vector3 toNeighbor, float distance)
     {
         this.boid = boid;
         this.toNeighbor = toNeighbor;

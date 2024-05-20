@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Boid Bpublicehaviour", menuName = "Boid Behaviour")]
+[CreateAssetMenu(fileName = "Boid Behaviour", menuName = "Boid Behaviour")]
 public class BoidBehaviourParameters : ScriptableObject
 {
     [Header("Vision")]
