@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a12dc10a059a9e4982c76a5ac6ac3d5, type: 3}
   m_Name: Bird
   m_EditorClassIdentifier: 
-  visionRange: -0.41
-  visionRadius: 1.521
-  trespassRadius: 3
-  avoidanceStrength: 0.493
-  alignmentStrength: 0.67
-  cohesionStrength: 1.02
-  speed: 1.66
+  visionRange: -0.661
+  visionRadius: 2.139
+  trespassRadius: 1.82
+  avoidanceStrength: 2
+  alignmentStrength: 0.358
+  cohesionStrength: 29.4
+  speed: 4.31
   turningSpeed: 4

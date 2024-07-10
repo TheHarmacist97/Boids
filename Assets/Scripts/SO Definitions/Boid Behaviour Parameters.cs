@@ -17,7 +17,7 @@ public class BoidBehaviourParameters : ScriptableObject
     [Range(0, 2f)] public float alignmentStrength;
 
     [Header("Cohesion")]
-    [Range(0, 2f)] public float cohesionStrength;
+    [Range(0, 200f)] public float cohesionStrength;
 
     public float speed;
     public float turningSpeed;

@@ -53,7 +53,7 @@ public class Boid : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            headingDirection = RandomizeDirection();
+            headingDirection = Random.onUnitSphere;
         }
 
         delta = Vector3.Angle(headingDirection, transform.forward);
@@ -138,23 +138,7 @@ public class Boid : MonoBehaviour
         return false;
     }
 
-    private Vector3 RandomizeDirection()
-    {
-        float phi = Random.Range(0, Mathf.PI);
-        float theta = Random.Range(0, TAU);
-
-        float sinPhi = Mathf.Sin(phi);
-        float cosPhi = Mathf.Cos(phi);
-        float cosTheta = Mathf.Cos(theta);
-        float sinTheta = Mathf.Sin(theta);
-
-        float x = sinPhi * cosTheta;
-        float y = sinPhi * sinTheta;
-        float z = cosPhi;
-
-        return new(x, y, z);
-    }
-
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Handles.color = Color.green;
@@ -198,6 +182,7 @@ public class Boid : MonoBehaviour
 
     }
 }
+#endif
 [SerializeField]
 public class Neighbour
 {
